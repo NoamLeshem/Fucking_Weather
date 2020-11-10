@@ -12,10 +12,6 @@ function getLocation() {
 function getWeather() {
 
 
-    var display_temp = document.getElementById("display_temperature");
-    var display_weather = document.getElementById("display_weather");
-
-
 
 
 }

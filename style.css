@@ -1,11 +1,19 @@
 #main_temp {
-    font: 400;
-    align-content: center;
+    font-weight: 500;
     padding-left: 50px;
+}
+
+#display_temperature {
+    padding-bottom: 1px;
+}
+
+#display_weather {
+    padding-top: 1px;
 }
 
 .search_bar {
     padding-left: 50px;
+    font-family: 'Varela Round';
 }
 
 .tabcontent {
@@ -14,12 +22,20 @@
 }
 
 #background {
+    align-content: center;
+    font-family: 'Varela Round', sans-serif;
     background: rgb(115, 206, 226);
     background: linear-gradient(5deg, rgba(115, 206, 226, 1) 1%, rgba(189, 189, 189, 1) 21%, rgba(0, 212, 255, 0.8743872549019608) 97%);
 }
 
+#next_week {
+    text-align: center;
+    align-items: center;
+    table-layout: auto;
+}
 
-/* Go from zero to full opacity */
+
+/* Goes from zero to full opacity */
 
 @keyframes fadeEffect {
     from {
@@ -70,6 +86,7 @@
 /* Style the tab content */
 
 .tabcontent {
+    font-family: 'Varela Round', sans-serif;
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;

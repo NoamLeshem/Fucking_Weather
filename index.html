@@ -4,7 +4,6 @@
 <!-- Head & Settings -->
 
 <head>
-
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="description" content="Weather App">
@@ -17,70 +16,76 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
 </head>
 
 <!-- Body -->
 
 <body id="background">
-    <!-- Search bar -->
-    <div class="search_bar">
-        <h1>Weather Forecast</h1>
-        <input id="main_search " type="text" placeholder="Search.." onchange="getLocation()">
-    </div>
-    <!-- Main temperature display -->
-    <div id="main_temp">
-        <h1 id="display_location">Haifa, IL</h1>
-        <h2 id="display_time">as of time timezone</h2>
-        <h1 id="display_temperature">23c*</h1>
-        <img id="display_weather" src="/icons/baseline_wb_sunny_black_18dp.png" width="18dp" height="18dp"></img>
-    </div>
-    <!-- Next week prediction -->
-    <div>
-        <hr>
-        <!-- week prediction -->
 
-        <table>
-            <tr>
-                <td>Sunday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>rainy</td>
-                <td>23</td>
-            </tr>
-        </table>
+    <section>
+        <!-- Search bar -->
+        <div class="search_bar">
+            <h1>Weather Forecast</h1>
+            <input id="main_search" type="text" placeholder="Search.." onchange="getLocation()">
+        </div>
+        <!-- Main temperature display -->
+        <div id="main_temp">
+            <h1 id="display_location">Haifa, IL</h1>
+            <h2 id="display_time">as of time timezone</h2>
+            <h1 id="display_temperature">25c°</h1>
+            <img id="display_weather" src="/Weather website/icons/baseline_wb_sunny_black_18dp.png" width="18dp" height="18dp"></img>
+        </div>
 
-        <hr>
-    </div>
+        <!-- Next week prediction -->
+        <div>
+            <hr>
+            <table>
+                <tr>
+                    <td>Sunday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>rainy</td>
+                    <td>23</td>
+                </tr>
+            </table>
 
-    <div class="Day_tabs">
+            <hr>
+        </div>
+    </section>
+
+
+
+    <section class="Day_tabs">
         <!-- Tab buttons-->
         <div class="tab">
             <button class="tablinks" onclick="openWeekDay(event, 'Sunday')" id="defaultOpen">Sunday</button>
@@ -125,17 +130,32 @@
         <div id="Saturday" class="tabcontent">
 
         </div>
-    </div>
+    </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="/__/firebase/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
 
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDcfhbvP16fOBbnr8KSxdc-9IXM8kHGiIo",
+            authDomain: "fucking-weather-5d186.firebaseapp.com",
+            databaseURL: "https://fucking-weather-5d186.firebaseio.com",
+            projectId: "fucking-weather-5d186",
+            storageBucket: "fucking-weather-5d186.appspot.com",
+            messagingSenderId: "77818083541",
+            appId: "1:77818083541:web:39456c8684f6e68160ca5c",
+            measurementId: "G-DB287Z2W1H"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 
 </html>
