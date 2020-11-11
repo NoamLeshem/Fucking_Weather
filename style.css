@@ -1,22 +1,82 @@
+html, body {
+    height:100%;
+    width: 100%;
+}
+
+.top_half {
+    width: 100%;
+    padding: 5% 5%;
+}
+
 #main_temp {
     font-weight: 500;
-    padding-left: 50px;
 }
 
-#display_temperature {
-    padding-bottom: 1px;
-}
-
-#display_weather {
-    padding-top: 1px;
+.info {
+    margin-left: 5%;
+    margin-top: 0;
+    font-size: large;
 }
 
 .search_bar {
-    padding-left: 50px;
-    font-family: 'Varela Round';
+    margin-top: 2.5%;
+    margin-left: 5%;
 }
 
-.tabcontent {
+input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+input[type="submit"] {
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ffc107;
+    color: #fff;
+}
+
+.week_table {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 50%;
+    height: 100%;
+    border-collapse: collapse;
+    float: right;
+}
+
+.week_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffc107;
+    color: #fff;
+  }
+
+.week_table td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.week_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.tabgraph {
     animation: fadeEffect 1s;
     /* Fading effect takes 1 second */
 }
@@ -24,8 +84,11 @@
 #background {
     align-content: center;
     font-family: 'Varela Round', sans-serif;
+    margin: 0;
     background: rgb(115, 206, 226);
-    background: linear-gradient(5deg, rgba(115, 206, 226, 1) 1%, rgba(189, 189, 189, 1) 21%, rgba(0, 212, 255, 0.8743872549019608) 97%);
+    background: url(https://images.wallpapersden.com/image/download/anime-girl-in-sunny-weather_a2ltaWiUmZqaraWkpJRnamtlrWZlbWU.jpg);
+    /*background: linear-gradient(5deg, rgba(115, 206, 226, 1) 1%, rgba(189, 189, 189, 1) 21%, rgba(0, 212, 255, 0.8743872549019608) 97%);*/
+    height: 100%;
 }
 
 #next_week {
@@ -46,13 +109,16 @@
     }
 }
 
+.day_tabs {
+    height: 100%;
+}
 
 /* Style the tab */
 
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
 }
 
 
@@ -60,12 +126,14 @@
 
 .tab button {
     background-color: inherit;
+    width: calc(100%/7);
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    border: 0 0 5px 0 solid #ffc107;
 }
 
 
@@ -89,6 +157,8 @@
     font-family: 'Varela Round', sans-serif;
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: none;
     border-top: none;
+    background-color: #ccc;
+    height: 100%;
 }

@@ -17,6 +17,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 
@@ -24,68 +26,78 @@
 
 <body id="background">
 
-    <section>
-        <!-- Search bar -->
-        <div class="search_bar">
-            <h1>Weather Forecast</h1>
-            <input id="main_search" type="text" placeholder="Search.." onchange="getLocation()">
-        </div>
-        <!-- Main temperature display -->
-        <div id="main_temp">
-            <h1 id="display_location">Haifa, IL</h1>
-            <h2 id="display_time">as of time timezone</h2>
-            <h1 id="display_temperature">25c°</h1>
-            <img id="display_weather" src="/Weather website/icons/baseline_wb_sunny_black_18dp.png" width="18dp" height="18dp"></img>
-        </div>
+    <!-- Search bar -->
+    <div class="search_bar">
+        <form>
+            <input type="text" name="" placeholder="Search location...">
+            <input type="submit" name="" value="Search">
+        </form>
+    </div>
 
-        <!-- Next week prediction -->
-        <div>
-            <hr>
-            <table>
-                <tr>
-                    <td>Sunday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>rainy</td>
-                    <td>23</td>
-                </tr>
-            </table>
+    <table class="top_half">
+        <td>
+            <!-- Main temperature display -->
+            <div class="info" id="main_temp">
+                <h1 id="display_location">Haifa, IL</h1>
+                <h2 id="display_time">as of time timezone</h2>
+                <h1 id="display_temperature">25c°</h1>
+                <!--<img id="display_weather" src="/Weather website/icons/baseline_wb_sunny_black_18dp.png" width="18dp" height="18dp"></img>-->
+                <i class="material-icons">wb_sunny</i>
+            </div>
+        </td>
+        <td>
+             <!-- Next week prediction -->
+            <div>
+                <table class="week_table">
+                    <tr>
+                        <th>Day of the week</th>
+                        <th>Weather</th>
+                        <th>Temperature</th>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>rainy</td>
+                        <td>23</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+       
+    </table>
 
-            <hr>
-        </div>
-    </section>
 
 
-
-    <section class="Day_tabs">
+    <section class="day_tabs">
         <!-- Tab buttons-->
         <div class="tab">
             <button class="tablinks" onclick="openWeekDay(event, 'Sunday')" id="defaultOpen">Sunday</button>
@@ -95,41 +107,51 @@
             <button class="tablinks" onclick="openWeekDay(event, 'Thursday')">Thursday</button>
             <button class="tablinks" onclick="openWeekDay(event, 'Friday')">Friday</button>
             <button class="tablinks" onclick="openWeekDay(event, 'Saturday')">Saturday</button>
-
-            <script>
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
-            </script>
         </div>
+
+        <div class="slider">
+            <div class="indicator"></div>
+        </div>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
 
         <!-- Tab content -->
         <div id="Sunday" class="tabcontent">
-            <h3>test1</h3>
+            <h3 class="tabgraph">graph1</h3>
         </div>
 
         <div id="Monday" class="tabcontent">
-            <h3>test2</h3>
+            <h3 class="tabgraph">graph2</h3>
         </div>
 
         <div id="Tuesday" class="tabcontent">
-            <h3>test3</h3>
+            <h3 class="tabgraph">graph3</h3>
         </div>
 
         <div id="Wednesday" class="tabcontent">
-
+            <h3 class="tabgraph">graph4</h3>
         </div>
 
         <div id="Thursday" class="tabcontent">
-
+            <h3 class="tabgraph">graph5</h3>
         </div>
 
         <div id="Friday" class="tabcontent">
-
+            <h3 class="tabgraph">graph6</h3>
         </div>
 
         <div id="Saturday" class="tabcontent">
-
+            <h3 class="tabgraph">graph7</h3>
         </div>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
     </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
