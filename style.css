@@ -1,6 +1,11 @@
 html, body {
     height:100%;
     width: 100%;
+    background: url(https://miro.medium.com/max/15904/1*Sv8bS5VBt3gJ9e9yJZl5RA.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .top_half {
@@ -16,6 +21,7 @@ html, body {
     margin-left: 5%;
     margin-top: 0;
     font-size: large;
+    color: #fff;
 }
 
 .search_bar {
@@ -31,14 +37,20 @@ input {
 }
 
 input[type="text"] {
-    background: #fff;
+    background: transparent;
     width: 340px;
     height: 50px;
-    border: none;
+    border: 2px solid #fff;
+    
     outline: none;
     padding: 0 25px;
     border-radius: 25px 0 0 25px;
 }
+
+input::placeholder {
+    color: #fff;
+}
+
 input[type="submit"] {
     position: relative;
     left: -5px;
@@ -48,13 +60,15 @@ input[type="submit"] {
     border: none;
     outline: none;
     cursor: pointer;
-    background: #ffc107;
-    color: #fff;
+    background: #1DB954;
+    color: #191414;
+    font-weight: bold;
 }
 
 .week_table {
-    border: 1px solid #ccc;
-    background: #fff;
+    border: 1px solid #1DB954;
+    background: #1A1C2B;
+    color: #d4d4dc;
     width: 50%;
     height: 100%;
     border-collapse: collapse;
@@ -65,16 +79,16 @@ input[type="submit"] {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #ffc107;
-    color: #fff;
+    background-color: #1DB954;
+    color: #191414;
   }
 
 .week_table td, th {
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     padding: 8px;
 }
 
-.week_table tr:nth-child(even){background-color: #f2f2f2;}
+.week_table tr:nth-child(even){background-color: #393f4d;}
 
 .tabgraph {
     animation: fadeEffect 1s;
@@ -85,8 +99,10 @@ input[type="submit"] {
     align-content: center;
     font-family: 'Varela Round', sans-serif;
     margin: 0;
-    background: rgb(115, 206, 226);
-    background: url(https://images.wallpapersden.com/image/download/anime-girl-in-sunny-weather_a2ltaWiUmZqaraWkpJRnamtlrWZlbWU.jpg);
+    /*background: rgb(115, 206, 226);
+    background: rgb(29,30,34);*/
+    /*background: linear-gradient(0deg, rgba(29,30,34,1) 0%, rgba(57,63,77,1) 100%);*/
+    /*background: url(https://images.wallpapersden.com/image/download/anime-girl-in-sunny-weather_a2ltaWiUmZqaraWkpJRnamtlrWZlbWU.jpg);*/
     /*background: linear-gradient(5deg, rgba(115, 206, 226, 1) 1%, rgba(189, 189, 189, 1) 21%, rgba(0, 212, 255, 0.8743872549019608) 97%);*/
     height: 100%;
 }
@@ -118,7 +134,7 @@ input[type="submit"] {
 .tab {
     overflow: hidden;
     border: none;
-    background-color: rgba(255,255,255,0.5);
+    background-color: transparent;
 }
 
 
@@ -133,21 +149,9 @@ input[type="submit"] {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    border: 0 0 5px 0 solid #ffc107;
-}
-
-
-/* Change background color of buttons on hover */
-
-.tab button:hover {
-    background-color: #ddd;
-}
-
-
-/* Create an active/current tablink class */
-
-.tab button.active {
-    background-color: #ccc;
+    border: 0 0 5px 0 solid #958EA6;
+    font-weight: bold;
+    color: #fff;
 }
 
 
@@ -159,6 +163,21 @@ input[type="submit"] {
     padding: 6px 12px;
     border: none;
     border-top: none;
-    background-color: #ccc;
+    background-color: rgba(26, 28, 43, 0.8);
     height: 100%;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #958EA6;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    color: #fff;
+    background-color: rgba(26, 28, 43, 0.8);
 }
